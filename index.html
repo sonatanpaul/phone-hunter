@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunting Phone API </title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main class="container mx-auto">
+        <section class="mt-20">
+            <div class="text-center">
+                <input id="search-field" type="text" placeholder="Search Here" class="input input-bordered input-error w-full max-w-xs" />
+                <button onclick="handleSearch()" class="btn btn-active btn-secondary">Search</button>
+            </div>
+        </section>
+        <!-- spinnner loader -->
+
+        <div id="loading-spinner" class="text-center my-60 hidden">
+            <span class="loading loading-spinner text-primary"></span>
+        </div>
+
+
+
+
+        <section class="mt-12 mb-12">
+            <div id="phone-container" class="  grid grid-cols md:grid-cols-2 gap-16  lg:grid-cols-3">
+                <!-- <div class="card w-96 bg-gray-100 shadow-2xl">
+                    <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title"></h2>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <div class="card-actions justify-center">
+                        <button class="btn btn-primary">Buy Now</button>
+                      </div>
+                    </div>
+                  </div> -->
+            </div>
+            <!-- show all button  -->
+            <div id="show-all-button" class="text-center mt-10 hidden">
+                <button class="btn btn-active btn-accent">Show All</button>
+            </div>
+        </section>
+
+        <!-- modal  -->
+        <div>
+            <!-- Open the modal using ID.showModal() method -->
+            <!-- <button class="btn" onclick="show_details_modal.showModal()">open modal</button> -->
+            <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+            <form method="dialog" class="modal-box">
+                <h3 id="show-datail-phone-name" class="font-bold text-lg text-center">Hello!</h3>
+                <div id="show-detail-container" class="text-center">
+
+                </div>
+                <div class="modal-action">
+                <!-- if there is a button in form, it will close the modal -->
+                <div class="grid justify-center items-start">
+                    <button class="btn">Close</button>
+                </div>
+                </div>
+            </form>
+            </dialog>
+                    </div>
+    </main>
+    <footer>
+
+    </footer>
+    
+
+
+
+
+    <!-- javascript file here  -->
+    <script src="js/script.js"></script>
+</body>
+</html>
