@@ -20,6 +20,14 @@ const displayPhones = phones => {
     phones = phones.slice(0, 12);
 
 
+    const noPhone = document.getElementById("no-found-message")
+    if(phones.length === 0){
+        noPhone.classList.remove("hidden")
+    }else{
+        noPhone.classList.add("hidden")
+    }
+
+
 
     phones.forEach(phone => {
         const phoneCard = document.createElement("div");
